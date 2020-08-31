@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {GadgetFactory} from 'ngx-dynamic-dashboard';
+import {NewsGadgetComponent} from './gadgets/news/news-gadget.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard-entry';
+  constructor() {
+    GadgetFactory.setComponentType('NewsGadgetComponent', NewsGadgetComponent);
+  }
 }

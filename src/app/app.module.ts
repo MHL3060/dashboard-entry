@@ -3,7 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {GridModule, MenuModule, NgxAdfModule} from 'ngx-dynamic-dashboard';
+import {
+  AddGadgetModule,
+  ConfigurationModule,
+  DynamicFormModule,
+  ErrorHandlerModule,
+  GridModule,
+  MenuModule,
+  NgxAdfModule,
+  RuntimeService
+} from 'ngx-dynamic-dashboard';
+import {GadgetSharedModule} from './gadgets/_common/gadget-shared.module';
+import {OptionsService} from 'ngx-dynamic-dashboard/dashboard/configuration/tab-options/service';
 
 @NgModule({
   declarations: [
@@ -12,11 +23,19 @@ import {GridModule, MenuModule, NgxAdfModule} from 'ngx-dynamic-dashboard';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    GadgetSharedModule,
     NgxAdfModule,
     MenuModule,
-    GridModule
+    GridModule,
+    DynamicFormModule,
+    ErrorHandlerModule,
+    ConfigurationModule,
+    AddGadgetModule
   ],
-  providers: [],
+  providers: [
+    RuntimeService,
+    OptionsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
