@@ -28,8 +28,6 @@ export class NewsGadgetComponent extends GadgetBase {
             _propertyService,
             _changeDetectionRef,
             _optionsService);
-        this.errorExists = false;
-        this.errorObject = null;
     }
 
     public preRun(): void {
