@@ -87,5 +87,4 @@ export class NewsGadgetComponent extends GadgetBase {
         this.setEndPoint(updatedPropsObject.endpoint);
         this.updateData(null);
     }
-
 }
