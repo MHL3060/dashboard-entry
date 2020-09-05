@@ -4,6 +4,7 @@ import {GadgetBase, GadgetInstanceService, GadgetPropertyService} from 'ngx-dyna
 import {OptionsService} from 'ngx-dynamic-dashboard';
 
 @Component({
+    moduleId: module.id,
     selector: 'app-dynamic-component',
     templateUrl: './view.html',
     styleUrls: ['../_common/styles-gadget.css']
@@ -29,8 +30,6 @@ export class NewsGadgetComponent extends GadgetBase {
             _optionsService);
         this.errorExists = false;
         this.errorObject = null;
-        this.title = "news";
-
     }
 
     public preRun(): void {
