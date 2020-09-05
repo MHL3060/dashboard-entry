@@ -1,11 +1,10 @@
 import {ChangeDetectorRef, Component} from '@angular/core';
 import {NewsService} from './service';
 import {GadgetBase, GadgetInstanceService, GadgetPropertyService} from 'ngx-dynamic-dashboard';
-import {OptionsService} from 'ngx-dynamic-dashboard/dashboard/configuration/tab-options/service';
+import {OptionsService} from 'ngx-dynamic-dashboard';
 
 @Component({
     selector: 'app-dynamic-component',
-    moduleId: module.id,
     templateUrl: './view.html',
     styleUrls: ['../_common/styles-gadget.css']
 })
@@ -21,14 +20,16 @@ export class NewsGadgetComponent extends GadgetBase {
                 protected _propertyService: GadgetPropertyService,
                 protected _changeDetectionRef: ChangeDetectorRef,
                 protected _newsService: NewsService,
+                protected _optionsService: OptionsService
                 ) {
         super(
             _gadgetInstanceService,
             _propertyService,
             _changeDetectionRef,
-            null);
+            _optionsService);
         this.errorExists = false;
         this.errorObject = null;
+        this.title = "news";
 
     }
 

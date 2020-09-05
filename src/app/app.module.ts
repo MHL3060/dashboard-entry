@@ -7,14 +7,14 @@ import {
   AddGadgetModule,
   ConfigurationModule,
   DynamicFormModule,
-  ErrorHandlerModule,
+  ErrorHandlerModule, GadgetSharedModule,
   GridModule,
   MenuModule,
-  NgxAdfModule,
+  NgxAdfModule, OptionsService,
   RuntimeService
 } from 'ngx-dynamic-dashboard';
-import {GadgetSharedModule} from './gadgets/_common/gadget-shared.module';
-import {OptionsService} from 'ngx-dynamic-dashboard/dashboard/configuration/tab-options/service';
+import {NewsService} from './gadgets/news/service';
+import {GadgetModule} from './gadgets/gadget.module';
 
 @NgModule({
   declarations: [
@@ -30,11 +30,14 @@ import {OptionsService} from 'ngx-dynamic-dashboard/dashboard/configuration/tab-
     DynamicFormModule,
     ErrorHandlerModule,
     ConfigurationModule,
-    AddGadgetModule
+    AddGadgetModule,
+    GadgetModule
+
   ],
   providers: [
     RuntimeService,
-    OptionsService
+    NewsService,
+    OptionsService,
   ],
   bootstrap: [AppComponent]
 })

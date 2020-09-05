@@ -4,7 +4,8 @@
     <div class="ui center aligned segment gadget" style="background-color: #f7f7f7">
 
         {{instanceId}}
-        <!--<app-gadget-header
+
+        <dashboard-gadget-header
                 (mouseover)="showGadgetControls(true)"
                 (mouseleave)="showGadgetControls(false)"
                 [globalOptions]="globalOptions"
@@ -20,7 +21,7 @@
                 (removeEvent)="remove()"
                 (runEvent)="run()"
                 (stopEvent)="stop()">
-        </app-gadget-header>-->
+        </dashboard-gadget-header>
 
         <div *ngIf="!inConfig"
              style="overflow-y:auto; padding-right:5px; padding-left:5px;max-height:800px; min-height: 275px; text-align: left !important; background-color:#f7f7f7">
