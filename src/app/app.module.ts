@@ -7,7 +7,7 @@ import {
   AddGadgetModule,
   ConfigurationModule,
   DynamicFormModule,
-  ErrorHandlerModule, GadgetSharedModule,
+  ErrorHandlerModule,
   GridModule,
   MenuModule,
   NgxAdfModule, OptionsService,
@@ -23,7 +23,6 @@ import {GadgetModule} from './gadgets/gadget.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GadgetSharedModule,
     NgxAdfModule,
     MenuModule,
     GridModule,
