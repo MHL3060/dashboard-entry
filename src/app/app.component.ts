@@ -11,6 +11,6 @@ import {NewsGadgetComponent} from './gadgets/news/news-gadget.component';
 export class AppComponent {
   title = 'dashboard-entry';
   constructor() {
-    GadgetFactory.setComponentType('NewsGadgetComponent', NewsGadgetComponent);
+    console.log("hello");
   }
 }

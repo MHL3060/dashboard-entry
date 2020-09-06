@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import {
 } from 'ngx-dynamic-dashboard';
 import {NewsService} from './gadgets/news/service';
 import {GadgetModule} from './gadgets/gadget.module';
+import {GadgetRegistry} from './GadgetRegistery';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,12 @@ import {GadgetModule} from './gadgets/gadget.module';
     RuntimeService,
     NewsService,
     OptionsService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: GadgetRegistry,
+      deps: [],
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
