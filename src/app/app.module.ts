@@ -1,19 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {
-  AddGadgetModule,
-  ConfigurationModule,
-  DynamicFormModule,
-  ErrorHandlerModule,
-  GridModule,
-  MenuModule,
-  NgxAdfModule, OptionsService,
-  RuntimeService
-} from 'ngx-dynamic-dashboard';
-import {NewsService} from './gadgets/news/service';
+import {BoardModule} from 'ngx-dynamic-dashboard';
 import {GadgetModule} from './gadgets/gadget.module';
 import {GadgetRegistry} from './GadgetRegistery';
 
@@ -22,22 +11,12 @@ import {GadgetRegistry} from './GadgetRegistery';
     AppComponent
   ],
   imports: [
+    GadgetModule,
     BrowserModule,
     AppRoutingModule,
-    NgxAdfModule,
-    MenuModule,
-    GridModule,
-    DynamicFormModule,
-    ErrorHandlerModule,
-    ConfigurationModule,
-    AddGadgetModule,
-    GadgetModule
-
+    BoardModule
   ],
   providers: [
-    RuntimeService,
-    NewsService,
-    OptionsService,
     {
       provide: APP_INITIALIZER,
       useFactory: GadgetRegistry,
