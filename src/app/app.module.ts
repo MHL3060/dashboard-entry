@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {BoardModule} from 'ngx-dynamic-dashboard';
 import {GadgetModule} from './gadgets/gadget.module';
 import {GadgetRegistry} from './GadgetRegistery';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {GadgetRegistry} from './GadgetRegistery';
     GadgetModule,
     BrowserModule,
     AppRoutingModule,
-    BoardModule
+    BoardModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
