@@ -5,7 +5,7 @@ import {OptionsService} from 'ngx-dynamic-dashboard';
 
 @Component({
     moduleId: module.id,
-    selector: 'app-dynamic-component',
+    selector: 'app-news-gadget',
     templateUrl: './view.html',
     styleUrls: ['../_common/styles-gadget.css']
 })
